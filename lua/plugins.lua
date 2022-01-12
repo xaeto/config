@@ -10,6 +10,7 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   } 
+
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
 
@@ -17,6 +18,8 @@ return require('packer').startup(function()
     "mcchrish/zenbones.nvim",
     requires = "rktjmp/lush.nvim"
   }
+  use 'RishabhRD/popfix'
+  use 'RishabhRD/nvim-lsputils'
 
   use 'neovim/nvim-lspconfig'
   use 'folke/lsp-colors.nvim'
