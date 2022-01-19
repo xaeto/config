@@ -26,7 +26,7 @@ return require('packer').startup(function()
   use 'nanotee/nvim-lsp-basics'
   use 'mfussenegger/nvim-lint'
   use 'williamboman/nvim-lsp-installer'
-
+  use 'Shatur/neovim-ayu'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -81,6 +81,8 @@ return require('packer').startup(function()
       require('gitsigns').setup()
     end
   }
+  use { 'tami5/lspsaga.nvim' }  -- nightly 
+  use { 'tami5/lspsaga.nvim', branch = 'nvim6.0' or 'nvim51' } -- for specific version
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'keng1ne/jmaps' 
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
