@@ -9,7 +9,12 @@ return require('packer').startup(function()
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
-  } 
+  }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
@@ -40,6 +45,8 @@ return require('packer').startup(function()
     end
   }
 
+  use {"catppuccin/nvim",as = "catppuccin" }
+
   use {
     'blackCauldron7/surround.nvim',
     config = function()
@@ -59,13 +66,6 @@ return require('packer').startup(function()
       require('spellsitter').setup()
     end
   }
-  use({
-    "NTBBloodbath/galaxyline.nvim",
-    -- your statusline
-    config = function()
-      require('galaxyline.themes.neonline')
-    end
-  })
 
   use "lukas-reineke/indent-blankline.nvim" 
   use {
