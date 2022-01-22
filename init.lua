@@ -1,7 +1,5 @@
 require('plugins')
 
-require('utils')
-
 require('defaults')
 require('keybindings')
 

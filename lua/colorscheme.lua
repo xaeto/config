@@ -14,7 +14,7 @@ require('catppuccin')
         native_lsp = {
             enabled = true,
             virtual_text = {
-                errors = "italic",
+                errors = "NONE",
                 hints = "italic",
                 warnings = "italic",
                 information = "italic",
@@ -49,7 +49,7 @@ require('catppuccin')
         bufferline = true,
         markdown = true,
         lightspeed = false,
-        ts_rainbow = false,
+        ts_rainbow = true,
         hop = false,
         notify = true,
         telekasten = true,
