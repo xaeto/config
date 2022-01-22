@@ -6,7 +6,7 @@ vim.g.mapleader = ' '
 
 opt.background = "dark"
 
-local indent = 4
+local indent = 2
 
 -- local to buffer options ----
 opt.tabstop = indent
@@ -42,12 +42,14 @@ opt.sidescrolloff = 8
 opt.joinspaces = false
 opt.showmode = false
 opt.background = "dark"
-opt.guicursor = ''
+opt.guicursor = ""
 opt.updatetime = 300
 
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:↴")
+
+vim.opt.completeopt = {'menuone', 'noselect'}
 
 require("indent_blankline").setup {
     -- for example, context is off by default, use this to turn it on
