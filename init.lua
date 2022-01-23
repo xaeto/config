@@ -10,3 +10,5 @@ require('completion')
 require('lsp')
 require('saga')
 require('colorscheme')
+
+require('filetypes')

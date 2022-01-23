@@ -10,7 +10,12 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
   use 'tpope/vim-fugitive'
   use {
     'nvim-lualine/lualine.nvim',
@@ -22,13 +27,6 @@ return require('packer').startup(function()
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
 
-  use {
-    "mcchrish/zenbones.nvim",
-    requires = "rktjmp/lush.nvim"
-  }
-  use 'RishabhRD/popfix'
-  use 'RishabhRD/nvim-lsputils'
-
   use 'neovim/nvim-lspconfig'
   use 'folke/lsp-colors.nvim'
   use 'nanotee/nvim-lsp-basics'
@@ -36,17 +34,17 @@ return require('packer').startup(function()
   use 'mfussenegger/nvim-lint'
   use 'williamboman/nvim-lsp-installer'
 
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lua'
   use 'L3MON4D3/LuaSnip'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/nvim-cmp'
+  use 'neovim/nvim-lspconfig'
   use 'saadparwaiz1/cmp_luasnip'
 
-  use {"catppuccin/nvim",as = "catppuccin" }
+  use {"catppuccin/nvim", as = "catppuccin" }
 
   use {
     'blackCauldron7/surround.nvim',
@@ -60,31 +58,24 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use 'kyazdani42/nvim-web-devicons'
   use {
     'lewis6991/spellsitter.nvim',
     config = function()
-      require('spellsitter').setup()
+      require('spellsitter').setup({enable = true})
     end
   }
 
   use "lukas-reineke/indent-blankline.nvim"
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    config = function() require'nvim-tree'.setup {} end
-  }
+  use { 'kyazdani42/nvim-tree.lua', config = function() require'nvim-tree'.setup {} end }
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
       require('gitsigns').setup()
     end
   }
+
   use { 'tami5/lspsaga.nvim' }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use 'keng1ne/jmaps'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'nvim-telescope/telescope-project.nvim'
   use {
@@ -96,4 +87,7 @@ return require('packer').startup(function()
   }
   use { "nvim-telescope/telescope-file-browser.nvim" }
   use 'jbyuki/nabla.nvim'
+
+  use 'keng1ne/jmaps'
+  use '~/personal/projects/filetype.nvim'
 end)
