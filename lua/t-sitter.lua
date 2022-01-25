@@ -17,6 +17,9 @@ require'nvim-treesitter.configs'.setup {
       node_decremental = "grm",
     },
   },
+  indent = {
+      enable = true
+  },
   context_commentstring = {
     enable = true
   },

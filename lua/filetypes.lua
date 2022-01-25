@@ -6,10 +6,6 @@ local default = {
   textwidth = 200
 }
 
-filetypes.register("html", {
-  shiftwidth = 200
-})
-
 filetypes.setup({
   enable = true,
   config = {
