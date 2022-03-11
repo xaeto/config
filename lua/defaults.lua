@@ -6,8 +6,8 @@ vim.o.shortmess = vim.o.shortmess .. "c"
 
 opt.background = "dark"
 
-local indent = 2
 -- local to buffer options ----
+local indent = 2
 opt.tabstop = indent
 opt.softtabstop = indent
 opt.shiftwidth = indent
@@ -55,7 +55,7 @@ opt.listchars:append("eol:↴")
 opt.completeopt = {'menu', 'menuone', 'noselect'}
 
 require("indent_blankline").setup {
-    show_current_context = true,
-    show_current_context_start = true,
-    show_end_of_line = true
+  show_current_context = true,
+  show_current_context_start = true,
+  show_end_of_line = true
 }

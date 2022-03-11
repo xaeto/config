@@ -89,5 +89,6 @@ return require('packer').startup(function()
   use 'jbyuki/nabla.nvim'
 
   use 'keng1ne/jmaps'
-  use 'keng1ne/filetype.nvim'
+  use '~/personal/projects/filetype.nvim'
+  -- use 'keng1ne/filetype.nvim'
 end)
