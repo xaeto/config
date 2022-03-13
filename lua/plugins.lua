@@ -44,15 +44,7 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'saadparwaiz1/cmp_luasnip'
 
-  use {"catppuccin/nvim", as = "catppuccin" }
-
-  use {
-    'blackCauldron7/surround.nvim',
-    config = function()
-      require"surround".setup {mappings_style = 'surround'}
-    end
-  }
-
+  use {"luisiacc/gruvbox-baby" }
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
